@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quest 5</title>
+    <script>
+        var valores = [];
+        var soma = 0;
+        
+        for (var i = 1; i <= 6; i++) 
+            var valor = parseFloat(prompt("Digite o " + i + "º valor: "));
+            valores.push(valor);
+            soma += valor;
+        
+        var media = soma / 6;
+        
+        document.write("<h2>Números informados:</h2>");
+        for (var i = 0; i < 6; i++) 
+            document.write(valores[i] + "<br>");
+        
+        document.write("<h2>Média aritmética dos valores:</h2>");
+        document.write(media);
+        </script>
+</head>
+<body>
+
+</body>
+</html>

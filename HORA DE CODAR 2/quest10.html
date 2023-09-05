@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quest 10</title>
+    <script>
+        function calcularPesoIdeal(altura, sexo) {
+            let pesoIdeal;
+
+            if (sexo === 1) {
+                pesoIdeal = 62.1 * altura - 44.7;
+            } else if (sexo === 2) {
+                pesoIdeal = 72.7 * altura - 58;
+            } else {
+                console.log("Sexo não reconhecido. Por favor, digite 1 para feminino ou 2 para masculino.");
+                return;
+            }
+
+            console.log(`O peso ideal é: ${pesoIdeal.toFixed(2)} kg`);
+        }
+
+        let altura = parseFloat(prompt("Digite a altura (em metros):"));
+        let sexo = parseInt(prompt("Digite o sexo (1 para feminino, 2 para masculino):"));
+
+        if (isNaN(altura) || isNaN(sexo) || altura <= 0 || (sexo !== 1 && sexo !== 2)) {
+            alert("Entrada inválida. Certifique-se de que a altura seja maior que zero e o sexo seja 1 para feminino ou 2 para masculino.");
+        } else {
+            calcularPesoIdeal(altura, sexo);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quest 11</title>
+    <script>
+        function adicao(a, b) {
+            return a + b;
+        }
+
+        function subtracao(a, b) {
+            return a - b;
+        }
+
+        function multiplicacao(a, b) {
+            return a * b;
+        }
+
+        function divisao(a, b) {
+            if (b === 0) {
+                return "Erro: divisão por zero";
+            }
+            return a / b;
+        }
+
+        let valor1 = parseFloat(prompt("Digite o primeiro valor:"));
+        let valor2 = parseFloat(prompt("Digite o segundo valor:"));
+        let operacao = parseInt(prompt("Escolha a operação (1 para Adição, 2 para Subtração, 3 para Divisão, 4 para Multiplicação):"));
+
+        if (isNaN(valor1) || isNaN(valor2) || isNaN(operacao) || operacao < 1 || operacao > 4) {
+            console.log("Entrada inválida. Certifique-se de que os valores sejam números e a operação seja 1, 2, 3 ou 4.");
+        } else {
+            let resultado;
+
+            switch (operacao) {
+                case 1:
+                    resultado = adicao(valor1, valor2);
+                    break;
+                case 2:
+                    resultado = subtracao(valor1, valor2);
+                    break;
+                case 3:
+                    resultado = divisao(valor1, valor2);
+                    break;
+                case 4:
+                    resultado = multiplicacao(valor1, valor2);
+                    break;
+            }
+
+            alert(`Resultado da operação: ${resultado}`);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
